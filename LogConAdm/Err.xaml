@@ -49,7 +49,7 @@
             Grid.Column="1" 
             Grid.Row="1"
             Grid.ColumnSpan="3" 
-            Text="Something went wrong..."
+            Text="Что-то пошло не так..."
             />
         <Button
             x:Name="OK"

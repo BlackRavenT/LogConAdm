@@ -34,11 +34,12 @@ namespace LogConAdm
 
             Console.WriteLine("Input " + username + " with " + userpass + " (" + userpassh + ')');
             string str = "";
-            int flag = ConnectSQLServer.Connection.ConnToDB(username, userpass, out str);
+            SqlConnection conn;
+            int flag = ConnectSQLServer.Connection.ConnToDB(username, userpass, out str, out conn);
 
             if (flag == 0)
             {
-                AdmMenu a = new AdmMenu(username);
+                AdmMenu a = new AdmMenu(username, conn);
                 a.Owner = this;
                 a.Show();
                 this.Hide();

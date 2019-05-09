@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace ConnectSQLServer
         public static SqlConnection GetDBConnection()
         {
             string datasource = @"LENOVO-PC\BRAVEN";
-            string database = "My_1";
+            string database = "HSE_Test";
             string username = "User-001";
             string password = "111";
                       
@@ -22,7 +22,7 @@ namespace ConnectSQLServer
         public static SqlConnection GetDBConnection(string username, string password)
         {
             string datasource = @"LENOVO-PC\BRAVEN";
-            string database = "My_1";
+            string database = "HSE_Test";
 
             return DBSQLServerUtils.GetDBConnection(datasource, database, username, password);
         }

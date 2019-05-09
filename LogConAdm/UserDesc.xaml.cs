@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace LogConAdm
 {
@@ -19,9 +20,18 @@ namespace LogConAdm
     /// </summary>
     public partial class UserDesc : Window
     {
+        public static SqlConnection conn;
+
         public UserDesc()
         {
             InitializeComponent();
+        }
+
+        public UserDesc(SqlConnection Con)
+        {
+            InitializeComponent();
+
+            conn = Con;
         }
 
         private void CloseApp_Click(object sender, RoutedEventArgs e)
@@ -37,10 +47,15 @@ namespace LogConAdm
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            NewUser a = new NewUser();
+            NewUser a = new NewUser(conn);
             a.Owner = this;
             this.Hide();
             a.Show();
+        }
+
+        private void Del_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

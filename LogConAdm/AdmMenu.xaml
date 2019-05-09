@@ -41,7 +41,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -51,28 +51,29 @@
             x:Name="HelloMessage"
             Grid.Column="0"  
             Grid.Row="0"
-            Text="Welcome"
+            Text="Добро пожаловать"
             Margin="10,10,10,0"
             />
         <ToolBarPanel Grid.Column="1" Grid.Row="0">
             <Button 
             x:Name="Button_Departments" 
-            Content="Deps" 
+            Content="Департаменты" 
             />
             <Button 
             x:Name="Button_Users" 
-            Content="Users" Click="Button_Users_Click" 
+            Content="Пользователи" 
+            Click="Button_Users_Click" 
             />
             <Button 
             x:Name="Button_Tables" 
-            Content="Tables"
+            Content="Таблицы"
             />
         </ToolBarPanel>
         <Button            
             x:Name="CloseApp"
             Grid.Column="1"
             Grid.Row="1"
-            Content="Exit"
+            Content="Выход"
             Margin="5" 
             Click="CloseApp_Click"
         />

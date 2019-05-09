@@ -10,10 +10,11 @@ namespace ConnectSQLServer
 {
     public class Connection
     {
-        public static int ConnToDB(string username, string password, out string str)
+        public static int ConnToDB(string username, string password, out string str, out SqlConnection ret)
         {
             Console.WriteLine("Getting Connection ...");
             SqlConnection conn = DBUtils.GetDBConnection(username, password);
+            ret = conn;
 
             try
             {

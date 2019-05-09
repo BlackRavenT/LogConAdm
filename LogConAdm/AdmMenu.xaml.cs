@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace LogConAdm
 {
@@ -19,17 +20,20 @@ namespace LogConAdm
     /// </summary>
     public partial class AdmMenu : Window
     {
+        public static SqlConnection Con;
+
         public AdmMenu()
         {
             InitializeComponent();
             this.Owner.Close();
         }
 
-        public AdmMenu(string str)
+        public AdmMenu(string str, SqlConnection conn)
         {
             InitializeComponent();
             HelloMessage.Text += ", " + str + '!';
-        }
+            Con = conn;
+        }   
 
         private void CloseApp_Click(object sender, RoutedEventArgs e)
         {
@@ -38,7 +42,7 @@ namespace LogConAdm
 
         private void Button_Users_Click(object sender, RoutedEventArgs e)
         {
-            UserDesc a = new UserDesc();
+            UserDesc a = new UserDesc(Con);
             a.Owner = this;
             this.Hide();
             a.Show();

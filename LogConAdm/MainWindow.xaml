@@ -48,7 +48,7 @@
             x:Name="UTLog"
             Grid.Column="1" 
             Grid.Row="3"
-            Content="Login" 
+            Content="Логин" 
             Margin="0,6,5,6" Height="28" Width="54"
             />
         <TextBox
@@ -62,7 +62,7 @@
             x:Name="UTPas" 
             Grid.Column="1" 
             Grid.Row="4" 
-            Content="Password" Margin="0,6,5,6" Height="28" Width="80" 
+            Content="Пароль" 
             />
         <PasswordBox 
             x:Name="UPassword" 
@@ -77,7 +77,7 @@
             />
         <Button 
             x:Name="ButtonLogIn" 
-            Content="Log In" 
+            Content="Войти в систему" 
             Grid.Column="1" 
             Grid.Row="5" 
             Grid.ColumnSpan="2" 

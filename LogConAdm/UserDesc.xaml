@@ -55,15 +55,20 @@
         <ToolBarPanel Grid.Column="2" Grid.Row="0">
             <Button 
             x:Name="Add" 
-            Content="Add new" Click="Add_Click" 
+            Content="Добавить" 
+            Click="Add_Click" 
             />
-
+            <Button 
+            x:Name="Del" 
+            Content="Удалить"
+            Click="Del_Click" 
+            />
         </ToolBarPanel>
         <Button            
             x:Name="Menu"
             Grid.Column="1"
             Grid.Row="1"
-            Content="Back"
+            Content="Назад"
             Margin="5" 
             Click="Menu_Click" 
         />
@@ -71,7 +76,7 @@
             x:Name="CloseApp"
             Grid.Column="2"
             Grid.Row="1"
-            Content="Exit"
+            Content="Выйти"
             Margin="5" Click="CloseApp_Click" 
         />
     </Grid>
